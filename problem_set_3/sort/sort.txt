@@ -1,0 +1,28 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Slowest sort time on random
+
+sort2 uses: Merge Sort
+
+How do you know?: Fastest Sorting on a 3 types of .txt due to better time complexity
+
+sort3 uses: Selection Sort
+
+How do you know?: Faster sort time than sort1 on random50000
+
+
+
+sort1 timing
+sorted50000     0.04s
+random50000     0.5s
+reversed50000   0.4s
+
+sort2 timing
+sorted50000     0.04s
+random50000     0.04s
+reversed50000   0.04s
+
+sort3 timing
+sorted50000     0.2s
+random50000     0.2s
+reversed50000   0.2s
