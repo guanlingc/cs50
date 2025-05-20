@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     // Open the memory card
-    char* infile = argv[1];
+    char *infile = argv[1];
     FILE *input = fopen(infile, "r");
     // While there's still data left to read from the memory card
     if (input == NULL)
