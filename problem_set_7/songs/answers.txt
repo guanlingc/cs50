@@ -1,0 +1,8 @@
+The audio aura by spotify is derived from 2 prominent
+moods in the user's top songs and artists.
+If audio aura was calculated from average energy, valence,
+and danceability instead.
+The user would be Orange and Blue due to the slight the higher rating on danceability and energy
+however the middle range of valence suggest some level of neutrality.
+The values might have skewed the way of the whole average. Perhaps getting counts like a histrogram to see
+the distribution of how many songs fall into a high , mid and low of each category.
