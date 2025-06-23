@@ -1,0 +1,19 @@
+
+HTML Tags
+1. <h3> Heading
+2. <p> paragraph to input text
+3. <table> to create a table
+4. <tr> To define columns
+5. <td> To input information for each column
+6. <img> To include an image
+7. <style> To specific styling of specified tags
+8. <ul> To create anunordered list
+9. <ol> To create an ordered list (steps)
+10.<li> To include items in the lists
+
+5 CSS Properties
+1. text-align - To place text either on the left or center
+2. Padding Bottom - To create spacing between the different sections
+3. margin bottom - To include a solid line to clearly define the different sections
+4. Background colour - To change colour of the cells
+5. list-style-type - to change the look of the bullets in the list

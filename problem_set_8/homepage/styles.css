@@ -1,0 +1,41 @@
+h2{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 20px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 20px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 15;
+    margin-bottom: 20px;
+}
+
+tr{
+    border-bottom: 1px solid;
+
+}
+ul, ol {
+        list-style-position: outside; /* Ensure bullets/numbers are outside text flow */
+        padding-left: 25px; /* Indent lists */
+        margin-bottom: 25px;
+        }
+
+ul li, ol li {
+    margin-bottom: 12px; /* Spacing between list items */
+    line-height: 1.8; /* Better readability for list items */
+}
+
+/* Specific styles for nested ingredient list */
+ul ul {
+    list-style-type: circle; /* Change bullet style for nested lists */
+    margin-top: 5px;
+    padding-left: 35px;
+}

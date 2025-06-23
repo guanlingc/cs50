@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // listen to button press
+            // wait for document to finish loading, then perform the following function
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // handle all correct buttons
+                let correct = document.querySelectorAll('.mcq_correct');
+                
+
+                // listne to button click event
+                for (let i = 0; i < correct.length; i++) {
+                    // add event listner and perform function
+                    correct[i].addEventListener('click', function() {
+                        // function will turn background green and give feedback
+                        correct[i].style.backgroundColor = 'Green';
+                        correct[i].parentElement.querySelector('.feedback').innerHTML = 'Correct';
+                    });
+                }
+                let incorrect = document.querySelectorAll('.mcq_incorrect');
+
+                // listne to button click event
+                for (let i = 0; i < incorrect.length; i++){
+                    incorrect[i].addEventListener('click', function() {
+                        // function will turn background red and give feedback
+                        incorrect[i].style.backgroundColor = 'Red';
+                        incorrect[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+
+                    });
+                }
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Gordon Ramsay') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which country is NOT in Asia?</h3>
+                <button class="mcq_correct">Canada</button>
+                <button class="mcq_incorrect">Japan</button>
+                <button class="mcq_incorrect">Korea</button>
+                <p class="feedback"></p>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the name of head chef in Hell's Kitchen?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p class="feedback"></p>
+
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

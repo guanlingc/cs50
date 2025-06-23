@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <style>
+            h2{
+                text-align: center;
+            }
+            p{
+                text-align: left;
+            }
+            .title{
+                text-align: center;
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let text_paragraph = document.querySelectorAll('.text');
+
+
+                for (let i = 0; i < text_paragraph.length; i++) {
+
+                    let currentParagraph = text_paragraph[i];
+
+                    // Store the original computed styles for *this specific paragraph*
+                    // window.getComputedStyle() is crucial to get styles from CSS files.
+                    let computedStyle = window.getComputedStyle(currentParagraph);
+                    let originalBackgroundColor = computedStyle.backgroundColor;
+                    // let originalColor = computedStyle.color;
+                    // let originalBackgroundColor = text_paragraph[i].backgroundColor;
+                    // let originalColor = text_paragraph[i].color;
+
+                    text_paragraph[i].addEventListener('mouseover', function () {
+                        text_paragraph[i].style.backgroundColor = '#fcecc0';
+                        // text_paragraph[i].style.color = '#ffffff';
+                    });
+
+
+                    text_paragraph[i].addEventListener('mouseout', function () {
+                        text_paragraph[i].style.backgroundColor = originalBackgroundColor;
+                        // text_paragraph[i].style.color = originalColor;
+                    });
+                }
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Hello World!</h2>
+        <p class="title">This page will tell you a little more about me as a person.</p>
+        <table>
+            <tr>
+                <td>Contents</td>
+            </tr>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+            </tr>
+            <tr>
+                <td><a href="badminton.html">Badminton</a></td>
+            </tr>
+            <tr>
+                <td><a href="baking.html">Chocolate Chip Cookie</a> </td>
+            </tr>
+            <tr>
+                <td><a href="reflection.html">Reflection</a></td>
+            </tr>
+        </table>
+
+
+
+        <h3>Why did i make the switch?</h3>
+        <p class="text">
+            Throughout the early stages of my career i was striving towards technical excellence,
+            being resourceful to solve any problem that are being thrown my way. However, i would slowly realise that didnt
+            seem to be enough, my peer were out-earning me.
+            I was puzzled, we all have the same 24-hours, yet why am i falling behind. Later on, i realise that it was due
+            to my skills not being valued.
+            Thats why i decided to make a switch
+        </p>
+
+        <h3>Why AI of all other fields? </h3>
+        <p class="text">
+            With a decade worth of job experience, i realise that physical jobs are not sustainable as you get weaker every year.
+            Therefore i wanted to look for something that was more officed based. With that i started reading up on different resources.
+            Firstly, it was a RIASEC test, based on your personality they would tell you what nature of jobs would be most suited for you.
+            It came down to eventually two fields, Data Science or CyberSecurity. CyberSecurity wasnt really what i wanted due to it being
+            too technical and the things that they were doing were actually similar to what quality control is doing.
+        </p>
+
+        <h3>How has the journey been so far? </h3>
+        <p class="text">
+            Its been quite enlightening actually, i got to know a whole group of other people apart from the science world.
+            Fresh Graduates whom i can share my working experience with, and in turn, learn about things from them.
+            I know my gaps between myself and them and thats where i want to be able to move towards next.
+            Althought there were alot of times where i felt i shouldn't have done this, there were also times where i feel like should have done it much earlier.
+        </p>
+
+        <h3>How is CS50 so far?</h3>
+        <p class="text">
+            It has been quite a revelation. Imagine being able to learn from someone who wants to teach? That didnt exist before, most the
+            educators i met all just want to get it done and over with. I didn't feel the passion from them. Perhaps they were more suited
+            for a life of doing their technical work.
+            I loved the Fiftyville probelm especially, being able to put the skills to work in your own way. It really tests you because ultimately,
+            you may have the ideas but you still need to be able to put them into codes and run them. That's where i am now.
+        </p>
+
+    </body>
+</html>
