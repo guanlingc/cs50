@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Show quote
+{% endblock %}
+
+
+{% block main %}
+    <!-- page to SHOW information for stock symbol -->
+
+    <style>
+
+        td,th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+    <div class="mb-3">
+        <table align=center>
+            <tr>
+                <th>Company Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+            <tr>
+                <td>{{ stock_info['name'] }}</td>
+                <td>{{ stock_info['price'] | usd }}</td>
+                <td>{{ stock_info['symbol'] }}</td>
+            </r>
+        </table>
+    </div>
+
+
+{% endblock %}

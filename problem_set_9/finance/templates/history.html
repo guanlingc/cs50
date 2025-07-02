@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Show quote
+{% endblock %}
+
+
+{% block main %}
+    <!-- page to SHOW information for user -->
+
+    <style>
+
+        td,th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <p><b>Transaction History</b></p>
+    <div class="mb-3">
+        <table align=center>
+            <tr>
+                <th>Company Name</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transaction Type</th>
+                <th>Transaction Time</th>
+            </tr>
+            <!--Display user information-->
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['shares'] }}</td>
+                <td>{{ row['price'] | usd}}</td>
+                <td>{{ row['transaction_type'] }}</td>
+                <td>{{ row['transacted'] }}</td>
+            </r>
+            {% endfor %}
+
+            <!--Display use price-->
+
+        </table>
+
+    </div>
+
+
+
+{% endblock %}

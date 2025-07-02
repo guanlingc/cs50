@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Show quote
+{% endblock %}
+
+
+{% block main %}
+    <!-- page to SHOW information for user -->
+
+    <style>
+
+        td,th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        p {
+            text-align: center
+        }
+    </style>
+    <div class="mb-3">
+        <table align=center>
+            <tr>
+                <th>Company Name</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Current Value</th>
+            </tr>
+            <!--Display user information-->
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['SUM(shares)'] }}</td>
+                <td>{{ row['current_price'] | usd}}</td>
+                <td>{{ row['stock_value'] | usd}}</td>
+            </r>
+            {% endfor %}
+
+            <!--Display use price-->
+
+        </table>
+
+    </div>
+
+    <p>Avaliable Cash <b>{{ account_cash | usd }}</b></p>
+    <p>Total Cash <b>{{ total_amount | usd }}</b></p>
+
+{% endblock %}

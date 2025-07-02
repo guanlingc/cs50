@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stock
+{% endblock %}
+
+{% block main %}
+    <!-- landing page to ask for stock symbol -->
+    <form action="/topup_cash" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="topup_amount" placeholder="Top-up Amount" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="topup_verify" placeholder="Verify Amount" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Top Up</button>
+    </form>
+{% endblock %}
